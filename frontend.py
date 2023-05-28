@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import *
-#import backend.py
+import backend1
 
 root = Tk()
 root.geometry("640x480")
@@ -8,11 +8,6 @@ root.wm_title("Multimedia to Text Program V.0.01")
 logo = tk.PhotoImage(file="logo.png")
 tk.Label(root, image=logo).pack(side="right")
 
-
-#def summarize()
-# if entry1: def get_video()
-# if entry2: def get_text()
-# if entry3: def get_sound()
 
 l1 = tk.Label(root, text='Video URL\n', font="Helvetica 16 bold")
 l1.pack()
@@ -41,7 +36,7 @@ canvas3.pack()
 sound_url = tk.Entry(root, width=50)
 canvas3.create_window(50, 0, window=sound_url)
 
-btn = Button(root, text='Summarize!')#command=summarize()
+btn = Button(root, text='Summarize!', command=backend1.summarize())
 btn.place(x=145, y=200)
 
 scroll_bar = Scrollbar(root)
